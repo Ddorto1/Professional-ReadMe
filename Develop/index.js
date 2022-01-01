@@ -1,5 +1,7 @@
 // TODO: Include packages needed for this application
-var inquirer= require('inquirer')
+const inquirer= require('inquirer')
+const fs= require('fs')
+
 // TODO: Create an array of questions for user input
 console.log ("Hello Node")
 const questions = [
@@ -16,7 +18,7 @@ const questions = [
     },
     {    
         type:'input',
-        name:'table of contents',
+        name:'table-of-contents',
         message: 'Please include a table of contents for your project.',
     },
     {
@@ -47,11 +49,42 @@ const questions = [
     ]),
 ]
 
+const generatePage= ()=>{
+    return`
+    #${answer.project}
+    # Table of Contents
+    -#description
+    -#installation
+    -#usage
+    -#license
+    -#contributions
+    -#tests
+    
+    ##Description: ${answer.description}
+
+    ##Installation: ${answer.installation}
+
+    ##Usage: ${answer.usage}
+
+    ##License: ${answer.license}
+
+    ##Contributing: ${answer.contributing}
+
+    ##Tests: ${answer.tests}`
+}
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+fs.writeFile("README.md", generatePage(), err=>{
+    if (err) throw new Error(err);
+    console.log('ReadMe complete! Reference README.md to see the results!')
+});
+  
+
 
 // TODO: Create a function to initialize app
-function init() {}
-
+function init() {
+    inquirer.prompt (questions)
+    .then((inquirerResponse, data))
+}
 // Function call to initialize app
 init();
