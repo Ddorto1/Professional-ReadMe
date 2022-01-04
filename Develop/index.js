@@ -3,10 +3,9 @@ const inquirer= require('inquirer')
 const fs= require('fs')
 
 // TODO: Create an array of questions for user input
-console.log ("Hello Node")
 const questions = [
-    inquirer
-    .prompt([{
+    // inquirer
+    {
         type:'input',
         name:'project',
         message:'What is the title of your project?'
@@ -46,12 +45,13 @@ const questions = [
         name:'tests',
         message: 'Provide examples on how to run tests for your application.'
     }
-    ]),
-]
+];
 
-const generatePage= ()=>{
+
+const generatePage= (data)=>{
+    // const answer= ''
     return`
-    #${answer.project}
+    #${data.project}
     # Table of Contents
     -#description
     -#installation
@@ -60,31 +60,34 @@ const generatePage= ()=>{
     -#contributions
     -#tests
     
-    ##Description: ${answer.description}
+    ##Description: ${data.description}
 
-    ##Installation: ${answer.installation}
+    ##Installation: ${data.installation}
 
-    ##Usage: ${answer.usage}
+    ##Usage: ${data.usage}
 
-    ##License: ${answer.license}
+    ##License: ${data.license}
 
-    ##Contributing: ${answer.contributing}
+    ##Contributing: ${data.contributing}
 
-    ##Tests: ${answer.tests}`
+    ##Tests: ${data.tests}`
 }
 
 // TODO: Create a function to write README file
-fs.writeFile("README.md", generatePage(), err=>{
+function write (data) {
+    fs.writeFile("README.md", generatePage(data), err=>{
     if (err) throw new Error(err);
     console.log('ReadMe complete! Reference README.md to see the results!')
 });
-  
-
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt (questions)
-    .then((inquirerResponse, data))
+    .then (data=>{
+        write(data)
+    })
+    // .then((inquirerResponse, data))
 }
 // Function call to initialize app
 init();
