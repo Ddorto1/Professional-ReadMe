@@ -27,11 +27,6 @@ const questions = [
         message: 'Please provide instructions and examples for use of project.', 
     },
     {
-        type:'input',
-        name:'image',
-        message: 'Please provide the image of your project in the "assets/images" folder'
-    },
-    {
         type:'list',
         name:'license',
         message: 'Please provide licensing for your project. This lets other developers know what can and cannot be done with your project.', 

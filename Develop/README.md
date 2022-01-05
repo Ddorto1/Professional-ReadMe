@@ -1,5 +1,5 @@
     
-#   golf
+#   Professional Read Me Generator
 ---
 # Table of Contents
 * [Description](#description)
@@ -13,17 +13,17 @@
 ---
 
 # Description: 
-  ball
+  This application allows the user to answer a series of questions and will generate the user input into a professional read me
 
 ---
 
 # Installation: 
-  titleist
+  NPM Init
 
 ---  
 
 # Usage: 
-  homie
+  When application is run the user will be prompted with a series of questions.  The answers to these questions will then be auto filled into a Professional Read Me template.
 
 --- 
 
@@ -33,18 +33,18 @@
 ---
 
 # Contributing: 
-  kjlj
+  Developers can contribute by addressing bugs with this current app.  Aside from that this repository is a demo and is not accepting contributions from other developers.
 
 ---
 
 # Tests: 
-  dek
+  npm run test
 
 ---
 
 # Questions:
-    http://github.com/Ddorto1
-    
+    https://github.com/Ddorto1.com
+
 For additional questions feel free to reach out at: 
     dallasdorton@yahoo.com
     
