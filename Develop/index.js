@@ -1,8 +1,9 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer= require('inquirer')
 const fs= require('fs')
 const generateMarkdown=require('./utils/generateMarkdown')
-// TODO: Create an array of questions for user input
+
+// Created an array of questions for user input
 const questions = [
     // inquirer
     {
@@ -62,43 +63,7 @@ const questions = [
     }
 ];
 
-
-// const generatePage= (data)=>{
-//     return`
-//     #${data.project}
-
-//     # Table of Contents
-//     -#[Description](#description)
-//     -#[Installation](#installation)
-//     -#[Usage](#usage)
-//     -#[Image](#image)
-//     -#[License](#license)
-//     -#[Contributions](#contributions)
-//     -#[Tests](#tests)
-    
-//     ##Description: 
-//     ${data.description}
-
-//     ##Installation: 
-//     ${data.installation}
-
-//     ##Usage: 
-//     ${data.usage}
-
-//     ##Image
-//     ${data.image}
-
-//     ##License: 
-//     ${data.license}
-
-//     ##Contributing: 
-//     ${data.contributing}
-
-//     ##Tests: 
-//     ${data.tests}`
-// }
-
-// TODO: Create a function to write README file
+// Created a function to write to the README file
 function write (data) {
     fs.writeFile("README.md", generateMarkdown(data), err=>{
     if (err) throw new Error(err);
@@ -106,13 +71,13 @@ function write (data) {
 });
 }
 
-// TODO: Create a function to initialize app
+// Created a function to initialize the app
 function init() {
     inquirer.prompt (questions)
     .then (data=>{
         write(data)
     })
-    // .then((inquirerResponse, data))
+    
 }
 // Function call to initialize app
 init();

@@ -10,7 +10,14 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
+// STILL NEED TO DO
+
+// WHEN I choose a license for my application from a list of options
+// THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+// WHEN I enter my GitHub username
+// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+
+// Created a function to generate markdown for README
 function generateMarkdown(data) {
   return `    
 #   ${data.project}
@@ -39,11 +46,7 @@ function generateMarkdown(data) {
 # Usage: 
   ${data.usage}
 
----  
-# Image
-  ${data.image}
-
----
+--- 
 
 # License: 
   ${data.license}
@@ -61,9 +64,10 @@ function generateMarkdown(data) {
 ---
 
 # Questions:
+    http://github.com/${data.github}
+    
 For additional questions feel free to reach out at: 
     ${data.email}
-    ${data.github}
     `
 }
 
