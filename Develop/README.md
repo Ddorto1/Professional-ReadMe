@@ -13,17 +13,17 @@
 ---
 
 # Description: 
-  This application allows the user to answer a series of questions and will generate the user input into a professional read me
+  This application allows the use to answer a series of questions and the inputs will generate a professional read me document
 
 ---
 
 # Installation: 
-  NPM Init
+  npm init
 
 ---  
 
 # Usage: 
-  When application is run the user will be prompted with a series of questions.  The answers to these questions will then be auto filled into a Professional Read Me template.
+  When the application is run the user will be prompted with a series of questions.  Answer to these questions will then be auto filled into a professional read me document
 
 --- 
 
@@ -33,7 +33,7 @@
 ---
 
 # Contributing: 
-  Developers can contribute by addressing bugs with this current app.  Aside from that this repository is a demo and is not accepting contributions from other developers.
+  Developers can contribute by addressing bugs with the current app.  Aside from that this repository is a demo and is not currently accepting additional contributions. 
 
 ---
 
@@ -43,7 +43,7 @@
 ---
 
 # Questions:
-    https://github.com/Ddorto1.com
+    https://github.com/Ddorto1
 
 For additional questions feel free to reach out at: 
     dallasdorton@yahoo.com
